@@ -1,6 +1,6 @@
 from selenium import webdriver
 import unittest
-import HtmlTestRunner
+import Report
 
 
 class GoogleSearch(unittest.TestCase):
@@ -31,4 +31,4 @@ class GoogleSearch(unittest.TestCase):
 
 
 if __name__ =='__main__':
-    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='/Users/alexandru.mandache/PycharmProjects/cpw_smoke_test/Reports'))
+    unittest.main(testRunner=Report.HTMLTestRunner(output='/Users/alexandru.mandache/PycharmProjects/cpw_smoke_test/Reports'))

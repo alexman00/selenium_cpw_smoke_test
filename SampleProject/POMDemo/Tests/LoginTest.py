@@ -6,7 +6,7 @@ import os
 sys.path.append(os.path.join(os.path.dirname(__file__), "..", ".."))
 from SampleProject.POMDemo.Pages.LoginPage import LoginPage
 from SampleProject.POMDemo.Pages.HomePage import HomePage
-import HtmlTestRunner
+import Report
 
 class LoginTest(unittest.TestCase):
     @classmethod
@@ -51,4 +51,4 @@ class LoginTest(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='/Users/alexandru.mandache/PycharmProjects/cpw_smoke_test/Reports'))
+    unittest.main(testRunner=Report.HTMLTestRunner(output='/Users/alexandru.mandache/PycharmProjects/cpw_smoke_test/Reports'))

@@ -1,5 +1,76 @@
 class Selectors(object):
-    changeLater = {
+    selectors = {
         "popup": "#_evidon-banner-content",
-        "close_popup": "#_evidon-banner-acceptbutton"
+        "close_popup": "#_evidon-banner-acceptbutton",
+        "main_logo": ".mod-header__logo-wrapper",
+        "main_menu_list": ".mod-navigation__menu",
+        "latest_content": ".row.mod-related-recipe__list",
+        "brand_scroller_footer": ".mod.mod-brand-teaser",
+        "footer_active_talk_section": ".mod-tab__pane.is-active",
+        "footer_faq_icon": ".icon.icon--info",
+        "footer_in_person_icon": ".icon.icon--in-person",
+        "footer_logo": ".mod-footer__logo-wrapper",
+        "click_adimo_cta": ".btn.btn--primary.mod-navigation-mobile__shop-btn",
+        "adimo_iframe": ".iframeBox",
+        "admimo_switch_to_iframe": "div.iframeBox iframe",
+        "adimo_assertion_css": "h1.mainTitle",
+        "click_bazaarvoice": ".bv-write-review.bv-focusable.bv-submission-button.bv-write-review__short-info",
+        "bazaarvoice_assertion": "#bv-fieldset-label-rating",
+        "search_icon_click": ".icon.icon--search",
+        "search_imput_text": ".mod-search__control",
+        "de_close_popup": "#_evh-ric-c",
+        "de_twitter_icon": ".icon.icon--twitter",
+        "de_link_disclaimer_headline": ".modal-content.mod-link-disclaimer__content",
+        "de_link_disclaimer_close": ".close",
+        "de_fusepump_cta_product": ".btn.btn--secondary.mod-stage-visual-product__button",
+        "de_fusepump_iframe": ".buynow-lightbox.buynow-lightbox",
+        "de_fusepmum_assertion": ".sort.ng-click-active",
+        "de_fusepump_cta_brand": ".btn.btn--secondary.mod-stage-visual-brand__button",
+        "muli_country_flag_click": ".flag-container__image",
+        "language_switch": ".mod-language-switch__lang",
+        "choose_arabic": ".mod-language-switch__action",
+        "arabic_homepage": "https://www.nestle-cereals.com/me/ar/home",
+        "uk_link_cache": "https://www.nestle-cereals.com/uk/en/search/site/fitness?sfsfasf",
+        "me_link_cache": "https://www.nestle-cereals.com/me/ar/search/site/fitness?sfsfasf",
+        "belgium_click_popup": "#_evidon-accept-button",
+        "portugal_close_popup": "#__bric_access_button_text",
+        "pledge_counter_bgd": ".mod-pledge-counter__background",
+        "pledge_counter_active_class": ".active",
+        "click_pledge_counter": ".mod-pledge-counter__cta-active-line-1",
+        "sticky_buy_now": ".mod.mod-sticky-buy-now",
+        "nutrition_facts": ".mod.mod-selector-table",
+        "singapore_popup": "#_evh-ric-c",
+        "norway_popup": "#__ghostery-close-icon-svg"
+
+
+
+    }
+
+
+    text_to_assert = {
+        "write_us_text": "I'd like to contact Nestlé Cereals because",
+        "faq_text": "We've tried to answer as many of your questions as possible. You can search them all here:",
+        "in_person_text": "We'd love to hear your comments about Nestlé cereals, so please let us know what you think, we always appreciate hearing from you.",
+        "adimo_text": "ADD PRODUCTS TO YOUR ONLINE SHOPPING NOW",
+        "bazaarvoice_text": "Overall Rating*",
+        "search_text": "nestle",
+        "de_write_us_text": "Ich habe eine Frage zu folgendem Thema:",
+        "de_faq_text": "Wir haben versucht so viele Fragen wie möglich schon zu beantworten. Suchen Sie hier nach Ihrer Frage:",
+        "de_in_person_text": "Wir freuen uns über Ihre Kommentare zu unseren Nestlé Cerealien. Bitte lassen Sie uns Ihre Meinung zukommen, wir freuen uns über jeden Kommentar.",
+        "de_link_disclaimer_text": "Datenschutzhinweis",
+        "de_fusepump_text": "Händler",
+        "belgium_write_us_text": "Ik wil graag contact opnemen met Nestlé ontbijtgranen om de volgende reden:",
+        "belgium_faq_text": "We hebben geprobeerd om zoveel mogelijk van uw vragen te beantwoorden. U kan ze hier allemaal doorzoeken:",
+        "belgium_in_person": "We horen graag uw opmerkingen over Nestlé ontbijtgranen. Dus deel uw mening met ons, want we waarderen die echt.",
+        "norway_talk_text": "Jeg vil gjerne kontakte Nestlé frokostblandinger fordi:",
+        "norway_faq_text": "Vi har prøvd å besvare så mange av spørsmålene deres som mulig. Du kan søke på alle her:",
+        "norway_in_person_text": "Vi vil gjerne høre kommentarene dine om Nestlé frokostblandinger, så la oss få vite hva du synes, vi setter bestandig pris på å høre fra deg.",
+        "portugal_write_text": "Quero entrar em contacto com Cereais Nestlé porque:",
+        "portugal_faq_text": "Tentámos responder ao maior número possível de perguntas. Pode procurá-las todas aqui:",
+        "portugal_in_person_text": "Todos os comentários acerca dos cereais Nestlé são importates para nós, por isso a sua opinião é sempre muito bem-vinda.",
+        "turk_write_text": "Nestlé Kahvaltılık Gevrekler ile görüşmek istiyorum, çünkü:",
+        "turk_faq_text": "Sorularınızın çoğunu yanıtlamaya çalıştık. Buradan arama yapabilirsiniz:",
+        "turk_in_person_text": "Nestlé kahvaltılık gevrekleri hakkındaki düşüncelerinizi öğrenmek istiyoruz, bize her zaman ulaşabilirsiniz."
+
+
     }

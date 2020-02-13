@@ -12,19 +12,19 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.chrome.options import Options
 import time
 
-class Test(unittest.TestCase):
+class Germany_smoke_test(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.driver = webdriver.Chrome()
+        # cls.driver = webdriver.Chrome()
+        # cls.driver.get("https://nestle-cereals.com/de")
+        # cls.driver.implicitly_wait(10)
+
+        chrome_option = webdriver.ChromeOptions()
+        chrome_option.add_argument("--headless")
+        cls.driver = webdriver.Chrome(chrome_options=chrome_option,
+                                      executable_path="/Users/alexandru.mandache/PycharmProjects/cpw_smoke_test/Drivers/chromedriver")
         cls.driver.get("https://nestle-cereals.com/de")
         cls.driver.implicitly_wait(10)
-
-        # chrome_option = webdriver.ChromeOptions()
-        # chrome_option.add_argument("--headless")
-        # cls.driver = webdriver.Chrome(chrome_options=chrome_option,
-        #                               executable_path="/Users/alexandru.mandache/PycharmProjects/cpw_smoke_test/Drivers/chromedriver")
-        # cls.driver.get("https://nestle-cereals.com/uk")
-        # cls.driver.implicitly_wait(10)
 
 
 
@@ -96,11 +96,8 @@ class Test(unittest.TestCase):
         CommonMethods.test_press_enter(self,locator2)
         time.sleep(3)
 
-    def test_12_cache_invalidation(self):
-        CommonMethods.test_search_cache_invalidation(self)
 
-
-    def test_13_fuspump_product(self):
+    def test_12_fuspump_product(self):
         self.driver.get("https://www.nestle-cereals.com/de/de/produkte-aktionen/marken/nestle-lion-cereals-uebersicht/nestle-lion-cereals?sefgsgsg'")
         locator = Selectors.selectors["de_fusepump_cta_product"]
         locator2 = Selectors.selectors["de_fusepump_iframe"]
