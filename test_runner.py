@@ -25,6 +25,7 @@ full_test_suite = TestSuite([united_kingdom,belgium,germany,middle_east,misc_tes
 
 variable = HTMLTestRunner(title= "Report",description="CPW AUTOMATION SUITE: SMOKE TESTS",verbosity=1)
 variable.run(full_test_suite)
+print ("yolo")
 
 # variable = HTMLTestRunner(title= "Report",description="CPW AUTOMATION SUITE: SMOKE TESTS",verbosity=1)
 # variable.run(individual)
