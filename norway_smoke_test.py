@@ -21,7 +21,7 @@ class Norway_smoke_test(unittest.TestCase):
 
         chrome_option = webdriver.ChromeOptions()
         chrome_option.add_argument("--headless")
-        cls.driver = webdriver.Chrome(chrome_options=_option,
+        cls.driver = webdriver.Chrome(chrome_options=chrome_option,
                                       executable_path="/Users/alexandru.mandache/PycharmProjects/cpw_smoke_test/Drivers/chromedriver")
         cls.driver.get("https://www.nestle-cereals.com/no/no")
         cls.driver.implicitly_wait(10)

@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>Report</h1>
-<p class='attribute'><strong>Start Time:</strong> 2020-02-13 12:50:52</p>
-<p class='attribute'><strong>Duration:</strong> 0:03:17.302374</p>
-<p class='attribute'><strong>Status:</strong> Pass 87 Error 2</p>
+<p class='attribute'><strong>Start Time:</strong> 2020-03-12 14:27:05</p>
+<p class='attribute'><strong>Duration:</strong> 0:10:51.527231</p>
+<p class='attribute'><strong>Status:</strong> Pass 92 Error 6</p>
 
 <p class='description'>CPW AUTOMATION SUITE: SMOKE TESTS</p>
 </div>
@@ -221,12 +221,12 @@ function showOutput(id, name) {
     <td>View</td>
 </tr>
 
-<tr class='passClass'>
+<tr class='errorClass'>
     <td>uk_smoke_test.Uk_smoke_test</td>
     <td>17</td>
-    <td>17</td>
+    <td>16</td>
     <td>0</td>
-    <td>0</td>
+    <td>1</td>
     <td><a href="javascript:showClassDetail('c1',17)">Detail</a></td>
 </tr>
 
@@ -513,24 +513,38 @@ pt1.10: PASS: Element found
     </td>
 </tr>
 
-<tr id='pt1.11' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_11_product_page</div></td>
+<tr id='ft1.11' class='none'>
+    <td class='errorCase'><div class='testcase'>test_11_product_page</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.11')" >
-        pass</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.11')" >
+        error</a>
 
-    <div id='div_pt1.11' class="popup_window">
+    <div id='div_ft1.11' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.11').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.11').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt1.11: PASS: Element clicked
-PASS: Switched to iframe. 
-ADD PRODUCTS TO YOUR ONLINE SHOPPING NOW
+ft1.11: PASS: Element clicked
+Traceback (most recent call last):
+  File "/Users/alexandru.mandache/PycharmProjects/cpw_smoke_test/uk_smoke_test.py", line 90, in test_11_product_page
+    CommonMethods.test_iframe(self,iframe)
+  File "/Users/alexandru.mandache/PycharmProjects/cpw_smoke_test/CommonMethods.py", line 58, in test_iframe
+    ActionChains(self.driver).move_to_element(element).perform()
+  File "/usr/local/lib/python3.7/site-packages/selenium/webdriver/common/action_chains.py", line 80, in perform
+    self.w3c_actions.perform()
+  File "/usr/local/lib/python3.7/site-packages/selenium/webdriver/common/actions/action_builder.py", line 76, in perform
+    self.driver.execute(Command.W3C_ACTIONS, enc)
+  File "/usr/local/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python3.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: Failed to execute 'elementsFromPoint' on 'Document': The provided double value is non-finite.
+  (Session info: headless chrome=80.0.3987.132)
+
 
 
         </pre>
@@ -697,12 +711,12 @@ PASS: Invalidating the cache still shows results
     </td>
 </tr>
 
-<tr class='passClass'>
+<tr class='errorClass'>
     <td>belgium_smoke_test.Belgium_smoke_test</td>
     <td>12</td>
-    <td>12</td>
+    <td>11</td>
     <td>0</td>
-    <td>0</td>
+    <td>1</td>
     <td><a href="javascript:showClassDetail('c2',12)">Detail</a></td>
 </tr>
 
@@ -982,23 +996,37 @@ pt2.10: PASS: Element clicked
     </td>
 </tr>
 
-<tr id='pt2.11' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_11_product_page</div></td>
+<tr id='ft2.11' class='none'>
+    <td class='errorCase'><div class='testcase'>test_11_product_page</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.11')" >
-        pass</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.11')" >
+        error</a>
 
-    <div id='div_pt2.11' class="popup_window">
+    <div id='div_ft2.11' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.11').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.11').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt2.11: PASS: Element clicked
-PASS: Switched to iframe. 
+ft2.11: Traceback (most recent call last):
+  File "/Users/alexandru.mandache/PycharmProjects/cpw_smoke_test/belgium_smoke_test.py", line 93, in test_11_product_page
+    CommonMethods.test_click_javascript(self, locator)
+  File "/Users/alexandru.mandache/PycharmProjects/cpw_smoke_test/CommonMethods.py", line 28, in test_click_javascript
+    click_var = self.driver.find_element_by_css_selector(locator)
+  File "/usr/local/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 598, in find_element_by_css_selector
+    return self.find_element(by=By.CSS_SELECTOR, value=css_selector)
+  File "/usr/local/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 978, in find_element
+    'value': value})['value']
+  File "/usr/local/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python3.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".btn.btn--secondary.mod-stage-visual-product__button"}
+  (Session info: headless chrome=80.0.3987.132)
+
 
 
         </pre>
@@ -1399,12 +1427,12 @@ PASS: Switched to iframe.
     </td>
 </tr>
 
-<tr class='passClass'>
+<tr class='errorClass'>
     <td>middle_east_smoke_test.Middle_east_smoke_test</td>
     <td>13</td>
-    <td>13</td>
+    <td>12</td>
     <td>0</td>
-    <td>0</td>
+    <td>1</td>
     <td><a href="javascript:showClassDetail('c4',13)">Detail</a></td>
 </tr>
 
@@ -1676,24 +1704,32 @@ PASS: Invalidating the cache still shows results
     </td>
 </tr>
 
-<tr id='pt4.11' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_11_product1</div></td>
+<tr id='ft4.11' class='none'>
+    <td class='errorCase'><div class='testcase'>test_11_product1</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt4.11')" >
-        pass</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft4.11')" >
+        error</a>
 
-    <div id='div_pt4.11' class="popup_window">
+    <div id='div_ft4.11' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt4.11').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft4.11').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt4.11: PASS: Element clicked
+ft4.11: PASS: Element clicked
 PASS: Element clicked
-PASS: Switched to iframe. 
+Traceback (most recent call last):
+  File "/Users/alexandru.mandache/PycharmProjects/cpw_smoke_test/middle_east_smoke_test.py", line 99, in test_11_product1
+    CommonMethods.test_iframe(self, locator2)
+  File "/Users/alexandru.mandache/PycharmProjects/cpw_smoke_test/CommonMethods.py", line 57, in test_iframe
+    element = wait.until(ec.visibility_of_element_located((By.CSS_SELECTOR, iframe)))
+  File "/usr/local/lib/python3.7/site-packages/selenium/webdriver/support/wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
 
 
         </pre>
@@ -1760,30 +1796,36 @@ PASS: Language market switch works
 <tr class='errorClass'>
     <td>misc_smoke_test.MiscTests</td>
     <td>3</td>
-    <td>2</td>
-    <td>0</td>
     <td>1</td>
+    <td>0</td>
+    <td>2</td>
     <td><a href="javascript:showClassDetail('c5',3)">Detail</a></td>
 </tr>
 
-<tr id='pt5.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test03_sticky_buy_now</div></td>
+<tr id='ft5.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test03_sticky_buy_now</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt5.1')" >
-        pass</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.1')" >
+        error</a>
 
-    <div id='div_pt5.1' class="popup_window">
+    <div id='div_ft5.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt5.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-pt5.1: PASS: Element found
-PASS: Element clicked
-am dat click pe ala
+ft5.1: Traceback (most recent call last):
+  File "/Users/alexandru.mandache/PycharmProjects/cpw_smoke_test/misc_smoke_test.py", line 51, in test03_sticky_buy_now
+    CommonMethods.test_find_element(self,locator2)
+  File "/Users/alexandru.mandache/PycharmProjects/cpw_smoke_test/CommonMethods.py", line 23, in test_find_element
+    element = wait.until(ec.visibility_of_element_located((By.CSS_SELECTOR, locator)))
+  File "/usr/local/lib/python3.7/site-packages/selenium/webdriver/support/wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
 
 
         </pre>
@@ -1822,7 +1864,7 @@ ft5.2: Traceback (most recent call last):
   File "/usr/local/lib/python3.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
     raise exception_class(message, screen, stacktrace)
 selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"#_evh-ric-c"}
-  (Session info: headless chrome=79.0.3945.130)
+  (Session info: headless chrome=80.0.3987.132)
 
 
 
@@ -1848,11 +1890,11 @@ selenium.common.exceptions.NoSuchElementException: Message: no such element: Una
         </div>
         <pre>
         
-pt5.3: e08008
-https://www.nestle-cereals.com/global/en/fitness/inspirational-stories/pink-ribbon?e08008
+pt5.3: j0j8g3
+https://www.nestle-cereals.com/global/en/fitness/inspirational-stories/pink-ribbon?j0j8g3
 PASS: Element found
-1887
-1888
+1956
+1957
 it increased by one
 
 
@@ -1864,16 +1906,16 @@ it increased by one
 </tr>
 
 <tr class='errorClass'>
-    <td>unittest.suite._ErrorHolder</td>
-    <td>1</td>
+    <td>norway_smoke_test.Norway_smoke_test</td>
+    <td>10</td>
+    <td>9</td>
     <td>0</td>
-    <td>0</td>
     <td>1</td>
-    <td><a href="javascript:showClassDetail('c6',1)">Detail</a></td>
+    <td><a href="javascript:showClassDetail('c6',10)">Detail</a></td>
 </tr>
 
 <tr id='ft6.1' class='none'>
-    <td class='errorCase'><div class='testcase'>Norway_smoke_test)</div></td>
+    <td class='errorCase'><div class='testcase'>test_01_click_cookie_popup</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -1887,16 +1929,273 @@ it increased by one
         </div>
         <pre>
         
-ft6.1: e08008
-https://www.nestle-cereals.com/global/en/fitness/inspirational-stories/pink-ribbon?e08008
-PASS: Element found
-1887
-1888
-it increased by one
-Traceback (most recent call last):
-  File "/Users/alexandru.mandache/PycharmProjects/cpw_smoke_test/norway_smoke_test.py", line 24, in setUpClass
-    cls.driver = webdriver.Chrome(chrome_options=_option,
-NameError: name '_option' is not defined
+ft6.1: Traceback (most recent call last):
+  File "/Users/alexandru.mandache/PycharmProjects/cpw_smoke_test/norway_smoke_test.py", line 31, in test_01_click_cookie_popup
+    CommonMethods.test_click_javascript(self, locator)
+  File "/Users/alexandru.mandache/PycharmProjects/cpw_smoke_test/CommonMethods.py", line 29, in test_click_javascript
+    self.driver.execute_script("arguments[0].click();", click_var)
+  File "/usr/local/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 636, in execute_script
+    'args': converted_args})['value']
+  File "/usr/local/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/usr/local/lib/python3.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.JavascriptException: Message: javascript error: arguments[0].click is not a function
+  (Session info: headless chrome=80.0.3987.132)
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_02_find_main_logo</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.2')" >
+        pass</a>
+
+    <div id='div_pt6.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.2: PASS: Element found
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_03_main_menu</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.3')" >
+        pass</a>
+
+    <div id='div_pt6.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.3: 
+
+
+
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_04_latest_content</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.4')" >
+        pass</a>
+
+    <div id='div_pt6.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.4: PASS: Element found
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_05_footer_scroller</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.5')" >
+        pass</a>
+
+    <div id='div_pt6.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.5: PASS: Element found
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_06_write_us_text</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.6')" >
+        pass</a>
+
+    <div id='div_pt6.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.6: Jeg vil gjerne kontakte Nestlé frokostblandinger fordi:
+Jeg har et spørsmål
+Jeg har noe pent å si
+Jeg er ikke særlig fornøyd
+Jeg tror jeg har en genial ide
+Det handler om noe annet
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_07_faq</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.7')" >
+        pass</a>
+
+    <div id='div_pt6.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.7: PASS: Element clicked
+Vi har prøvd å besvare så mange av spørsmålene deres som mulig. Du kan søke på alle her:
+Hva er gluten?
+Hva er fullkorn?
+Hvor mye fullkorn må jeg spise hver dag?
+Hvorfor tilsettes det sukker i frokostblandinger?
+VIS ALLE VANLIGE SPØRSMÅL
+Press to see all FAQs
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_08_in_person</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.8')" >
+        pass</a>
+
+    <div id='div_pt6.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.8: PASS: Element clicked
+Vi vil gjerne høre kommentarene dine om Nestlé frokostblandinger, så la oss få vite hva du synes, vi setter bestandig pris på å høre fra deg.
+Returadresse
+Hvis du ikke er fornøyd med produktet du har kjøpt, returner det til:
+Postboks 683 Skøyen
+0214 Oslo
+KUNDESTØTTE
+Ring vår kundetelefon på grønt nummer:
+800 80 730
+Åpningstider: Hverdager kl. 9.00-21.00
+Facebook
+Nå kan du også komme i kontakt med oss på Facebook:
+Nestlé Breakfast Cereals Norge
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_09_footer_logo</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.9')" >
+        pass</a>
+
+    <div id='div_pt6.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.9: PASS: Element found
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt6.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_10_search</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt6.10')" >
+        pass</a>
+
+    <div id='div_pt6.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt6.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt6.10: PASS: Element clicked
 
 
         </pre>
@@ -2269,6 +2568,7 @@ pt8.2: PASS: Element found
         <pre>
         
 pt8.3: 
+
 
 
 
@@ -2766,10 +3066,10 @@ pt9.10: PASS: Element clicked
 
 <tr id='total_row'>
     <td>Total</td>
-    <td>89</td>
-    <td>87</td>
+    <td>98</td>
+    <td>92</td>
     <td>0</td>
-    <td>2</td>
+    <td>6</td>
     <td>&nbsp;</td>
 </tr>
 </table>

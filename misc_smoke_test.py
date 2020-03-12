@@ -30,13 +30,7 @@ class MiscTests(unittest.TestCase):
         cls.driver.implicitly_wait(10)
 
 
-    def test_01_click_cookie_popup(self):
-        locator = Selectors.selectors["de_close_popup"]
-        CommonMethods.test_click_javascript(self,locator)
-        print("clicked element")
-
-
-    def test_02_pledge_counter(self):
+    def test_01_pledge_counter(self):
         locator = Selectors.selectors["pledge_counter_bgd"]
         locator2 = Selectors.selectors["pledge_counter_active_class"]
         click = Selectors.selectors["click_pledge_counter"]
@@ -44,7 +38,7 @@ class MiscTests(unittest.TestCase):
         CommonMethods.test_find_element(self,locator)
         CommonMethods.test_counter(self,locator2,click)
 
-    def test03_sticky_buy_now(self):
+    def test_02_sticky_buy_now(self):
         locator = Selectors.selectors["sticky_buy_now"]
         locator2 = Selectors.selectors["nutrition_facts"]
         self.driver.get("https://www.nestle-cereals.com/master01/en/brands/products/qa-product-page-do-not-delete")
