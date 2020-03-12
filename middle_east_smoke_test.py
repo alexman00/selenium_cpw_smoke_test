@@ -87,6 +87,7 @@ class Middle_east_smoke_test(unittest.TestCase):
     def test_10_cache_invalidation(self):
         link = Selectors.selectors["me_link_cache"]
         CommonMethods.test_search_cache_invalidation(self,link)
+        time.sleep(1)
 
 
     def test_11_product1(self):
